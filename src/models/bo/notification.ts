@@ -1,6 +1,6 @@
 import { Table, Column, Model, AutoIncrement, PrimaryKey, AllowNull, DataType, Default } from 'sequelize-typescript'
 
-@Table({ paranoid: true, freezeTableName: false, timestamps: true })
+@Table({ paranoid: true, freezeTableName: true, timestamps: true, tableName: 'notifications' })
 export default class Notification extends Model<Notification> {
 
   @AutoIncrement

@@ -10,7 +10,7 @@ export enum REQUEST_PARAMS_TYPE {
   BODY_PARAMS = 3,
 }
 
-@Table({ paranoid: true, freezeTableName: false, timestamps: true })
+@Table({ paranoid: true, freezeTableName: true, timestamps: true, tableName: 'properties' })
 export default class Property extends Model<Property> {
   public static TYPES = TYPES
   public static SCOPES = SCOPES

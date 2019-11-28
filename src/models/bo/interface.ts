@@ -7,7 +7,7 @@ const Op = Sequelize.Op
 
 enum methods { GET = 'GET', POST = 'POST', PUT = 'PUT', DELETE = 'DELETE' }
 
-@Table({ paranoid: true, freezeTableName: false, timestamps: true })
+@Table({ paranoid: true, freezeTableName: true, timestamps: true, tableName: 'interfaces' })
 export default class Interface extends Model<Interface> {
 
   /** hooks */

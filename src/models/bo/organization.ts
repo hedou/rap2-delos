@@ -1,7 +1,7 @@
 import { Table, Column, Model, HasMany, AutoIncrement, PrimaryKey, AllowNull, DataType, Default, BelongsTo, BelongsToMany, ForeignKey, AfterCreate } from 'sequelize-typescript'
 import { User, Repository, OrganizationsMembers, Logger } from '../'
 
-@Table({ paranoid: true, freezeTableName: false, timestamps: true })
+@Table({ paranoid: true, freezeTableName: true, timestamps: true, tableName: 'organizations' })
 export default class Organization extends Model<Organization> {
 
 

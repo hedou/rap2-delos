@@ -5,7 +5,7 @@ import * as Sequelize from 'sequelize'
 
 const Op = Sequelize.Op
 
-@Table({ paranoid: true, freezeTableName: false, timestamps: true })
+@Table({ paranoid: true, freezeTableName: true, timestamps: true, tableName: 'modules' })
 export default class Module extends Model<Module> {
 /** hooks */
   @BeforeCreate

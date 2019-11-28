@@ -1,7 +1,7 @@
 import { Table, Column, Model, HasMany, AutoIncrement, PrimaryKey, AllowNull, DataType, Unique, BelongsToMany } from 'sequelize-typescript'
 import { Organization, Repository, OrganizationsMembers, RepositoriesMembers } from '../'
 
-@Table({ paranoid: true, freezeTableName: false, timestamps: true })
+@Table({ paranoid: true, freezeTableName: true, timestamps: true, tableName: 'users' })
 export default class User extends Model<User> {
 
   @AutoIncrement

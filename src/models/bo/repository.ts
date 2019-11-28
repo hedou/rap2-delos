@@ -2,7 +2,7 @@ import { Table, Column, Model, HasMany, AutoIncrement, PrimaryKey, AllowNull, Da
 import { User, Organization, Module, Interface, RepositoriesCollaborators } from '../'
 import RedisService, { CACHE_KEY } from '../../service/redis'
 
-@Table({ paranoid: true, freezeTableName: false, timestamps: true })
+@Table({ paranoid: true, freezeTableName: true, timestamps: true, tableName: 'repositories' })
 export default class Repository extends Model<Repository> {
 
   /** hooks */

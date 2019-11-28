@@ -2,7 +2,7 @@ import { Table, Column, Model, AutoIncrement, PrimaryKey, ForeignKey } from 'seq
 import { Repository } from '../../models'
 
 
-@Table({ paranoid: true, freezeTableName: false, timestamps: true, tableName: 'default_val' })
+@Table({ paranoid: true, freezeTableName: true, timestamps: true, tableName: 'default_val' })
 export default class DefaultVal extends Model<DefaultVal> {
 
   @PrimaryKey

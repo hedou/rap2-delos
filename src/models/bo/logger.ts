@@ -6,7 +6,7 @@ enum types {
   LOCK = 'lock', UNLOCK = 'unlock', JOIN = 'join', EXIT = 'exit',
 }
 
-@Table({ paranoid: true, freezeTableName: false, timestamps: true })
+@Table({ paranoid: true, freezeTableName: true, timestamps: true, tableName: 'loggers' })
 export default class Logger extends Model<Logger> {
   public static TYPES = types
 
